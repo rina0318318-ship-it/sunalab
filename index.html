@@ -2182,6 +2182,123 @@ section > * { position: relative; z-index: 1; }
   box-shadow: 0 0 28px rgba(6,199,85,0.35) !important;
   border-color: #06C755 !important;
 }
+
+/* ══════════════════════════════════════════════════
+   MOBILE FIXES
+══════════════════════════════════════════════════ */
+
+/* 1. 右側の黒余白・横スクロール防止 */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+section {
+  overflow-x: hidden;
+}
+
+/* 2. ワープエフェクトをモバイルで無効化（テキスト被り防止） */
+@media (max-width: 768px) {
+  section::after { display: none !important; }
+  section::before {
+    display: none !important;
+  }
+}
+
+/* 3. VOICES テキスト被り修正 */
+.voices-grid { position: relative; z-index: 3; }
+.voice-card  { position: relative; z-index: 3; }
+#voices { padding-bottom: 5rem; }
+
+/* 4. BEFORE/AFTER 矢印 スマホで自然に */
+@media (max-width: 640px) {
+  .ba-arrow {
+    transform: rotate(90deg);
+    display: block;
+    margin: 0.8rem auto;
+    font-size: 1.2rem;
+  }
+}
+
+/* 5. ROOMS スマホ崩れ修正 */
+@media (max-width: 640px) {
+  .rooms-menu {
+    padding: 0.5rem 0.8rem;
+    border-width: 2px;
+  }
+  .room-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0.8rem 0.4rem;
+  }
+  .room-item > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .room-quest {
+    font-size: 0.38rem;
+    min-width: 3.8rem;
+    flex-shrink: 0;
+  }
+  .room-name {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .room-desc {
+    font-size: 0.8rem;
+    padding-left: 4.3rem;
+    color: rgba(245,240,232,0.45);
+    line-height: 1.5;
+    white-space: normal;
+  }
+}
+
+/* 6. 全体的な左右余白統一 */
+@media (max-width: 640px) {
+  .pain-inner,
+  .what-inner,
+  .challenge-inner,
+  .profile-inner,
+  .story-inner,
+  .vision-inner,
+  .values-inner,
+  .rooms-inner,
+  .price-inner,
+  .faq-inner,
+  .cta-inner {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    box-sizing: border-box;
+  }
+  img { max-width: 100%; }
+}
+
+/* 7. 背景キャラクター スマホで薄く */
+@media (max-width: 768px) {
+  .story-bg-char img { opacity: 0.08 !important; }
+  .rooms-bg-char { display: none; }
+  .cta-bg-gate img { opacity: 0.12 !important; }
+  .challenge-bg img { opacity: 0.06 !important; }
+}
+
+/* 8. Price grid スマホで1カラム */
+@media (max-width: 640px) {
+  .price-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 9. RPG choice buttons スマホ */
+@media (max-width: 640px) {
+  .rpg-choices { gap: 0.8rem; }
+  .choice-text { font-size: 0.45rem !important; }
+  .rpg-choice-btn { padding: 0.9rem 1rem; }
+}
 </style>
 </head>
 <body>
