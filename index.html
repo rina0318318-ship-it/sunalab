@@ -973,7 +973,9 @@ a { color: inherit; text-decoration: none; }
   gap: 0.18rem;
   flex: 1;
   min-width: 0;
+  text-align: left;
 }
+.room-item { text-align: left; }
 
 .room-quest {
   font-family: 'Press Start 2P', monospace;
@@ -2232,16 +2234,18 @@ section {
 
 /* 2. ワープエフェクトをモバイルで無効化（テキスト被り防止） */
 @media (max-width: 768px) {
-  section::after { display: none !important; }
-  section::before {
-    display: none !important;
-  }
+  section::after { display: none !important; height: 0 !important; clip-path: none !important; }
+  section::before { display: none !important; }
 }
+/* PC でも section::after のz-index を下げてコンテンツに被らないように */
+section::after { z-index: 0 !important; }
 
 /* 3. VOICES テキスト被り修正 */
 .voices-grid { position: relative; z-index: 3; }
-.voice-card  { position: relative; z-index: 3; }
-#voices { padding-bottom: 5rem; }
+.voice-card  { position: relative; z-index: 3; break-inside: avoid; }
+#voices { padding-bottom: 6rem; overflow: visible; }
+.voice-dialog { height: auto !important; min-height: 0 !important; }
+#voices .section-inner, #voices > div { position: relative; z-index: 3; }
 
 /* 4. BEFORE/AFTER 矢印 スマホで自然に */
 @media (max-width: 640px) {
