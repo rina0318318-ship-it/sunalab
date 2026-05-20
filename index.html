@@ -2337,6 +2337,56 @@ section::after { z-index: 0 !important; }
   .choice-text { font-size: 0.45rem !important; }
   .rpg-choice-btn { padding: 0.9rem 1rem; }
 }
+
+/* ── ROOMS 強制修正 ── */
+.rooms-inner { text-align: left !important; }
+.rooms-subtitle { text-align: center !important; }
+
+.room-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  text-align: left !important;
+  gap: 0.8rem !important;
+}
+.room-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 0.15rem !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+.room-quest,
+.room-name,
+.room-desc {
+  text-align: left !important;
+  display: block !important;
+}
+.room-name {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  font-size: 1rem !important;
+}
+.room-desc {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  font-size: 0.78rem !important;
+}
+.room-arrow {
+  align-self: center !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  font-size: 1.2rem !important;
+  color: rgba(126,200,227,0.4) !important;
+}
+.room-item.active .room-arrow {
+  color: rgba(230,160,20,0.5) !important;
+}
 </style>
 </head>
 <body>
