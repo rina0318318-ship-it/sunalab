@@ -2485,6 +2485,50 @@ section::after { z-index: 0 !important; }
 }
 .room-item.active .room-arrow { color: rgba(230,160,20,0.45) !important; }
 .room-item:hover .room-arrow  { color: rgba(126,200,227,0.6) !important; }
+
+/* ── 背景画像とテキストの重なり改善 ── */
+/* CTA: 背景の猫を控えめに、暗めのオーバーレイを強化 */
+.cta-bg-gate img {
+  opacity: 0.16 !important;
+}
+.cta-gate-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(8,7,2,0.82) 0%,
+    rgba(8,7,2,0.55) 40%,
+    rgba(8,7,2,0.82) 100%
+  ) !important;
+}
+/* CTA: 選択肢ボタンに不透明な下地を敷いて視認性UP */
+.rpg-choice-btn {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.rpg-choice-yes {
+  background: linear-gradient(135deg, rgba(46,32,6,0.92), rgba(20,16,8,0.92)) !important;
+  border-color: rgba(230,160,20,0.7) !important;
+}
+.rpg-choice-no {
+  background: rgba(10,14,26,0.88) !important;
+  border-color: rgba(255,255,255,0.22) !important;
+}
+.rpg-choice-no:hover {
+  background: rgba(16,20,34,0.92) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+}
+.choice-sub { color: rgba(245,240,232,0.6) !important; }
+/* CTA: ダイアログボックスの下地をより不透明に */
+#cta-final .dialog-box {
+  background: rgba(8,11,20,0.96) !important;
+}
+/* ROOMS: 背景の建物イラストを弱め、カード下地を濃く */
+.rooms-bg-char img { opacity: 0.18 !important; }
+.room-item {
+  background: rgba(8,14,28,0.94) !important;
+}
+.room-item.active {
+  background: rgba(26,20,8,0.94) !important;
+}
 </style>
 </head>
 <body>
