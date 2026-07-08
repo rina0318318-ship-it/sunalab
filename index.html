@@ -1085,8 +1085,10 @@ a { color: inherit; text-decoration: none; }
 
 .challenge-ready {
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--gold);
+  margin-top: 1.4rem;
+  text-shadow: 0 0 12px rgba(230,160,20,0.5);
   animation: blink 1s step-end infinite;
 }
 
@@ -2486,6 +2488,9 @@ section::after { z-index: 0 !important; }
 .room-item.active .room-arrow { color: rgba(230,160,20,0.45) !important; }
 .room-item:hover .room-arrow  { color: rgba(126,200,227,0.6) !important; }
 
+/* ── 日本語の折り返し制御（文節単位でのみ改行） ── */
+.nb { display: inline-block; }
+
 /* ── 背景画像とテキストの重なり改善 ── */
 /* CTA: 背景の猫を控えめに、暗めのオーバーレイを強化 */
 .cta-bg-gate img {
@@ -2619,7 +2624,7 @@ section::after { z-index: 0 !important; }
     </ul>
     <div class="pain-conclusion reveal">
       <p>それ、独学の限界じゃなくて、</p>
-      <p class="pain-conclusion-strong">次のステージへのサインです。</p>
+      <p class="pain-conclusion-strong"><span class="nb">次のステージへの</span><span class="nb">サインです。</span></p>
     </div>
   </div>
 </section>
@@ -2794,22 +2799,22 @@ section::after { z-index: 0 !important; }
   <canvas id="storyCanvas"></canvas>
   <div class="story-inner">
     <div class="section-title reveal" style="color:var(--gold-light);">✦ STORY ✦</div>
-    <div class="section-subtitle reveal" style="color:var(--cream);">「スナラボ」という名前に込めた想い</div>
+    <div class="section-subtitle reveal" style="color:var(--cream);"><span class="nb">「スナラボ」という</span><span class="nb">名前に込めた想い</span></div>
 
     <div class="story-dialog reveal">
       <div class="story-text" data-story="0">
-        「一粒の砂は、あまりにも小さい。<br>
-        けれど、その小さな粒がいくつも集まると、<br>
-        キラキラと光る砂漠になる。」
+        <span class="nb">「一粒の砂は、</span><span class="nb">あまりにも小さい。</span><br>
+        <span class="nb">けれど、</span><span class="nb">その小さな粒が</span><span class="nb">いくつも集まると、</span><br>
+        <span class="nb">キラキラと光る</span><span class="nb">砂漠になる。」</span>
       </div>
       <div class="story-continue">▼ つづく</div>
     </div>
 
     <div class="story-dialog reveal">
       <div class="story-text" data-story="1">
-        「一人ひとりの小さなスキルが集まれば<br>
-        やがて、星をも動かす力になる。<br>
-        いや、輝く星そのものになる。」
+        <span class="nb">「一人ひとりの</span><span class="nb">小さなスキルが</span><span class="nb">集まれば</span><br>
+        <span class="nb">やがて、</span><span class="nb">星をも動かす</span><span class="nb">力になる。</span><br>
+        <span class="nb">いや、</span><span class="nb">輝く星</span><span class="nb">そのものになる。」</span>
       </div>
       <div class="story-continue">▼ つづく</div>
     </div>
@@ -2863,27 +2868,27 @@ section::after { z-index: 0 !important; }
     <div class="flag-card reveal">
       <div class="flag-num">FLAG 01</div>
       <p class="flag-text">
-        「人生は冒険。<br>
-        知識を『武器』に変え、<br>
-        どこでも戦えるスキルを鍛えよう。」
+        <span class="nb">「人生は冒険。</span><br>
+        <span class="nb">知識を『武器』に変え、</span><br>
+        <span class="nb">どこでも戦える</span><span class="nb">スキルを鍛えよう。」</span>
       </p>
     </div>
     <div class="flag-card reveal">
       <div class="flag-num">FLAG 02</div>
       <p class="flag-text">
-        「スキルは『魔法』。訓練は『遊び』。<br>
-        楽しむことが、<br>一番の成功の鍵。」
+        <span class="nb">「スキルは『魔法』。</span><span class="nb">訓練は『遊び』。</span><br>
+        <span class="nb">楽しむことが、</span><br><span class="nb">一番の成功の鍵。」</span>
       </p>
     </div>
     <div class="flag-card reveal">
       <div class="flag-num">FLAG 03</div>
       <p class="flag-text">
-        「共に挑み、共に磨き合い、共に進む。<br>
-        利他と成長の精神が、<br>この場の誓い。」
+        <span class="nb">「共に挑み、</span><span class="nb">共に磨き合い、</span><span class="nb">共に進む。</span><br>
+        <span class="nb">利他と成長の精神が、</span><br><span class="nb">この場の誓い。」</span>
       </p>
     </div>
   </div>
-  <p class="flags-footer reveal">ここは、育つ意志と遊び心が集うフィールド。</p>
+  <p class="flags-footer reveal"><span class="nb">ここは、</span><span class="nb">育つ意志と遊び心が</span><span class="nb">集うフィールド。</span></p>
 </section>
 
 <!-- ══════════════════════════════════════════
@@ -2994,7 +2999,7 @@ section::after { z-index: 0 !important; }
             <span class="price-amount" style="font-size:clamp(1.6rem,5vw,2.4rem);">¥2,980</span>
             <span style="font-family:'DotGothic16',sans-serif;font-size:1rem;color:rgba(245,240,232,0.6);">／ 月</span>
           </span>
-          <div style="font-family:'DotGothic16',sans-serif;font-size:0.8rem;color:var(--gold);margin-top:0.3rem;">▲ 約1日あたり¥99</div>
+          <div style="font-family:'DotGothic16',sans-serif;font-size:0.8rem;color:var(--gold);margin-top:0.3rem;">▲ 1日あたり約99円</div>
         </div>
 
         <div style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:rgba(230,160,20,0.03);border:1px solid rgba(230,160,20,0.15);">
