@@ -2491,6 +2491,17 @@ section::after { z-index: 0 !important; }
 /* ── 日本語の折り返し制御（文節単位でのみ改行） ── */
 .nb { display: inline-block; }
 
+/* ── モバイルメニュー: 完全不透明化＆前面固定 ── */
+@media (max-width: 768px) {
+  .header-nav.open {
+    background: #0a0e1a !important;
+    border-bottom: 2px solid rgba(230,160,20,0.4);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.7);
+    z-index: 1001;
+    transform: translateZ(0);
+  }
+}
+
 /* ── スマホでも管理人アバターを表示 ── */
 @media (max-width: 580px) {
   .profile-avatar {
@@ -3106,19 +3117,19 @@ section::after { z-index: 0 !important; }
         <div class="faq-a"><span class="faq-icon">A.</span><span>大丈夫です！月の途中から参加いただけます。なお、過去の勉強会アーカイブをご覧になりたい方は、初回のみ購入できる「アーカイブ見放題パス（買い切り）」をあわせてご利用ください。</span></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text">ある程度自分でやってきた人向けですか？</span><span class="faq-arrow">▼</span></button>
+        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text"><span class="nb">ある程度</span><span class="nb">自分でやってきた</span><span class="nb">人向けですか？</span></span><span class="faq-arrow">▼</span></button>
         <div class="faq-a"><span class="faq-icon">A.</span><span>はい、まさにそういう方向けです。すでに売上を作ったことがある、独学でやってきた、でも次の壁にぶつかっている——そんな方が一番フィットします。「なぜ売れているのか言語化できていない」という方にも刺さるコミュニティです。</span></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text">スマホだけでも参加できますか？</span><span class="faq-arrow">▼</span></button>
+        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text"><span class="nb">スマホだけでも</span><span class="nb">参加できますか？</span></span><span class="faq-arrow">▼</span></button>
         <div class="faq-a"><span class="faq-icon">A.</span><span>はい、スマホだけで全て完結します。コミュニティへの参加も、勉強会の視聴も、質問のやりとりもスマホからOKです。</span></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text">副業でも参加できますか？忙しくても大丈夫？</span><span class="faq-arrow">▼</span></button>
+        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text"><span class="nb">副業でも</span><span class="nb">参加できますか？</span><span class="nb">忙しくても大丈夫？</span></span><span class="faq-arrow">▼</span></button>
         <div class="faq-a"><span class="faq-icon">A.</span><span>もちろんです。リアルタイムで参加できない回があっても大丈夫です。コミュニティ内でのやりとりを見返したり、自分のペースで活動できる設計にしています。アーカイブも見たい方は「アーカイブ見放題パス（買い切り）」をご活用ください。</span></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text">他の物販コミュニティとどう違うの？</span><span class="faq-arrow">▼</span></button>
+        <button class="faq-q"><span class="faq-icon">Q.</span><span class="faq-q-text"><span class="nb">他の物販コミュニティと</span><span class="nb">どう違うの？</span></span><span class="faq-arrow">▼</span></button>
         <div class="faq-a"><span class="faq-icon">A.</span><span>多くの物販コミュニティが「仕入れ・利益率・せどり」に特化している中、スナラボは「写真で売れ方が変わる」という視点に特化しています。同じ商品でも、撮り方・見せ方・AIの使い方次第で反応が変わる——その部分を一緒に研究するコミュニティです。また、メルカリ・フリマアプリを中心とした実践的なノウハウをお伝えしつつ、管理人は楽天などのECも現役で運営しているためフリマだけに依存しない視野で学べます。ゲーム感覚でスキルアップできる仕組みで楽しく続けられ、独自のアルゴリズム解析情報もいち早く共有します。</span></div>
       </div>
     </div>
